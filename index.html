@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Botones de Navegación</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #ffffff, #f4fff7, #e7f8ec);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #163d24;
+    }
+
+    .container {
+      background: #ffffff;
+      width: 90%;
+      max-width: 420px;
+      padding: 40px 30px;
+      border-radius: 22px;
+      box-shadow: 0 10px 30px rgba(22, 61, 36, 0.12);
+      text-align: center;
+      border: 1px solid #dcefe2;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 12px;
+      color: #184d2b;
+    }
+
+    p {
+      font-size: 15px;
+      color: #4d6b58;
+      margin-bottom: 28px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    button {
+      border: none;
+      border-radius: 14px;
+      padding: 15px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 16px rgba(24, 77, 43, 0.12);
+    }
+
+    .btn-google {
+      background: #dff5e6;
+      color: #184d2b;
+    }
+
+    .btn-facebook {
+      background: #9fd8ac;
+      color: #10331d;
+    }
+
+    .btn-youtube {
+      background: #184d2b;
+      color: white;
+    }
+
+    button:hover {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 10px 22px rgba(24, 77, 43, 0.18);
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mis accesos rápidos</h1>
+    <p>Haz clic en un botón para abrir la página que desees.</p>
+
+    <div class="buttons">
+      <button class="btn-google" onclick="goToPage('https://www.google.com')">Ir a Google</button>
+      <button class="btn-facebook" onclick="goToPage('https://www.facebook.com')">Ir a Facebook</button>
+      <button class="btn-youtube" onclick="goToPage('https://www.youtube.com')">Ir a YouTube</button>
+    </div>
+  </div>
+
+  <script>
+    function goToPage(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
