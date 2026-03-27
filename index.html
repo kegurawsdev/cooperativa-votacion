@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Botones de Navegación</title>
+  <title>Votación 2026</title>
+
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
@@ -12,8 +16,8 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #ffffff, #f4fff7, #e7f8ec);
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f4fff7, #e6f5ec);
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -25,78 +29,96 @@
       background: #ffffff;
       width: 90%;
       max-width: 420px;
-      padding: 40px 30px;
+      padding: 35px 28px;
       border-radius: 22px;
-      box-shadow: 0 10px 30px rgba(22, 61, 36, 0.12);
+      box-shadow: 0 12px 30px rgba(22, 61, 36, 0.15);
       text-align: center;
-      border: 1px solid #dcefe2;
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 220px;
+      margin: 0 auto 15px;
+      display: block;
     }
 
     h1 {
-      font-size: 28px;
-      margin-bottom: 12px;
-      color: #184d2b;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #308655;
     }
 
     p {
-      font-size: 15px;
-      color: #4d6b58;
-      margin-bottom: 28px;
+      font-size: 14px;
+      font-weight: 1000;
+      color: #324639;
+      margin-bottom: 16px;
     }
 
     .buttons {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
     }
 
+    /* BOTONES HOMOGÉNEOS */
     button {
       border: none;
-      border-radius: 14px;
-      padding: 15px 20px;
-      font-size: 16px;
-      font-weight: bold;
+      border-radius: 16px;
+      padding: 12px;
+      font-size: 15px;
+      font-weight: 600;
       cursor: pointer;
       transition: all 0.25s ease;
-      box-shadow: 0 6px 16px rgba(24, 77, 43, 0.12);
-    }
+      letter-spacing: 0.6px;
 
-    .btn-google {
-      background: #dff5e6;
-      color: #184d2b;
-    }
-
-    .btn-facebook {
-      background: #9fd8ac;
-      color: #10331d;
-    }
-
-    .btn-youtube {
-      background: #184d2b;
+      background: linear-gradient(135deg, #3a9c63, #308655);
       color: white;
+
+      box-shadow: 0 6px 16px rgba(31, 94, 58, 0.25);
     }
 
     button:hover {
-      transform: translateY(-3px) scale(1.01);
-      box-shadow: 0 10px 22px rgba(24, 77, 43, 0.18);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 22px rgba(31, 94, 58, 0.35);
     }
 
     button:active {
-      transform: scale(0.98);
+      transform: scale(0.97);
     }
   </style>
 </head>
+
 <body>
   <div class="container">
+
+    <!-- LOGO -->
+    <img src="logo.png" alt="Cooperativa Juan XXIII" class="logo">
+
     <h1>VOTACIÓN DEL TERCIO DE DIRECTIVOS 2026</h1>
     <p>Seleccione la categoría de votación que desea realizar</p>
 
     <div class="buttons">
-      <button class="btn-google" onclick="goToPage('https://docs.google.com/forms/d/e/1FAIpQLSdzSnurOpdapmB6_-PEVQYIHqlIh6imUHyR7GvInLRLooltwA/viewform?usp=publish-editor')">APROBACIÓN DE LOS ESTADOS FINANCIEROS 2025</button>
-      <button class="btn-google" onclick="goToPage('https://docs.google.com/forms/d/e/1FAIpQLSeaLW_vwiqIiSisc-KQL6Mq32ClzDX4j2rrvDJNzdkKbwziYA/viewform?usp=publish-editor')">CONSEJO DE ADMINISTRACIÓN</button>
-      <button class="btn-facebook" onclick="goToPage('https://docs.google.com/forms/d/e/1FAIpQLSeRKAEqp-vNtl9Qo8IQdX8YP2UqjW4-yNXmXawUj0W5wok41w/viewform?usp=publish-editor')">CONSEJO DE VIGILANCIA</button>
-      <button class="btn-youtube" onclick="goToPage('https://docs.google.com/forms/d/e/1FAIpQLScGRP6k44MiZiXpow-ADjKv9CxOCF2ZTIraD5wlViMuPptyMA/viewform?usp=dialog')">COMITÉ ELECTORAL</button>
-      <button class="btn-youtube" onclick="goToPage('https://docs.google.com/forms/d/e/1FAIpQLSe3qR7FlQZ2a8DioA2Vj8yrFZdz63Are9MsMTm94cn45Zuk_A/viewform?usp=publish-editor')">COMITÉ DE EDUCACIÓN</button>
+      <button onclick="goToPage('https://docs.google.com/forms/d/e/1FAIpQLSdzSnurOpdapmB6_-PEVQYIHqlIh6imUHyR7GvInLRLooltwA/viewform?usp=publish-editor')">
+        APROBACIÓN DE LOS ESTADOS FINANCIEROS 2025
+      </button>
+
+      <button onclick="goToPage('https://docs.google.com/forms/d/e/1FAIpQLSeaLW_vwiqIiSisc-KQL6Mq32ClzDX4j2rrvDJNzdkKbwziYA/viewform?usp=publish-editor')">
+        CONSEJO DE ADMINISTRACIÓN
+      </button>
+
+      <button onclick="goToPage('https://docs.google.com/forms/d/e/1FAIpQLSeRKAEqp-vNtl9Qo8IQdX8YP2UqjW4-yNXmXawUj0W5wok41w/viewform?usp=publish-editor')">
+        CONSEJO DE VIGILANCIA
+      </button>
+
+      <button onclick="goToPage('https://docs.google.com/forms/d/e/1FAIpQLScGRP6k44MiZiXpow-ADjKv9CxOCF2ZTIraD5wlViMuPptyMA/viewform?usp=dialog')">
+        COMITÉ ELECTORAL
+      </button>
+
+      <button onclick="goToPage('https://docs.google.com/forms/d/e/1FAIpQLSe3qR7FlQZ2a8DioA2Vj8yrFZdz63Are9MsMTm94cn45Zuk_A/viewform?usp=publish-editor')">
+        COMITÉ DE EDUCACIÓN
+      </button>
     </div>
   </div>
 
